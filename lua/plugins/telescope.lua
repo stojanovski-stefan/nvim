@@ -1,3 +1,4 @@
+-- This plugin is used for fuzzyfinding and grep throughout projects
 return {
   {
     'nvim-telescope/telescope.nvim',

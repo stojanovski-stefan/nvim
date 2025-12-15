@@ -1,3 +1,4 @@
+-- treesitter is a programming language parser that provides syntax highlighting and indenting
   return {
     "nvim-treesitter/nvim-treesitter", 
     build = ":TSUpdate",

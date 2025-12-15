@@ -1,4 +1,9 @@
+-- Langauge Server Protocos (LSPs) is a standard that allows communication
+-- between text editors and langauge servers (running on your machine) that
+-- give "langauge intelligence features"
+
 return {
+  -- manages and installs LSPs on system
   {
     "williamboman/mason.nvim",
     config = function()
@@ -6,19 +11,26 @@ return {
     end
   },
 
+  -- bridges gap between mason and lspconfig
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "clangd"}
+        ensure_installed = {"lua_ls", "clangd", "pyright"}
       })
     end
   },
 
+  -- configures neovim to use LSPs, set up communication between nvim and LSPs
   {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      vim.lsp.config["pyright"] = {
+        capabilities = capabilities,
+        filetypes = {"python"}
+      }
+
       vim.lsp.config["clang"] = {
         capabilities = capabilities
       }

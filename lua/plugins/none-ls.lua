@@ -1,3 +1,4 @@
+-- Linters and formatting
 return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {
