@@ -1,4 +1,7 @@
--- Linters and formatting
+--  extends LSP functionality by allowing formatters and linters to integrate 
+--  through the LSP protocol, even if they weren't originally designed as 
+--  language servers. This unified approach means all diagnostics, formatting,
+--  and code actions appear through the same LSP interface.
 return {
 	"nvimtools/none-ls.nvim",
 	dependencies = {

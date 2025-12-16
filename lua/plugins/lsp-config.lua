@@ -11,7 +11,9 @@ return {
     end
   },
 
-  -- bridges gap between mason and lspconfig
+  -- providing automatic installation of language servers and simplified configuration.
+  -- This plugin ensures that servers installed via Mason are automatically recognized 
+  -- and configured by nvim-lspconfig, streamlining the setup process significantly.
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
@@ -22,6 +24,11 @@ return {
   },
 
   -- configures neovim to use LSPs, set up communication between nvim and LSPs
+  -- provides default configurations for numerous language servers, handling 
+  -- the communication between Neovim's built-in LSP client and external language
+  -- servers. It defines server capabilities, file type associations, and initialization 
+  -- options, making it straightforward to enable LSP features like autocompletion, 
+  -- diagnostics, and code actions
   {
     "neovim/nvim-lspconfig",
     config = function()
