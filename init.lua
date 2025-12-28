@@ -33,6 +33,9 @@ vim.keymap.set('v', '<C-/>', 'gc', { remap = true })
 vim.keymap.set('n', '<C-_>', 'gcc', { remap = true })
 vim.keymap.set('v', '<C-_>', 'gc', { remap = true })
 
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 
